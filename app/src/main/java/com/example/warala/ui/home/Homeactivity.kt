@@ -137,8 +137,9 @@ class HomeActivity : AppCompatActivity() {
         binding.navCompass.setOnClickListener {
             startActivity(Intent(this, LearnActivity::class.java))
         }
+        // ✅ navAdd button click
         binding.navAdd.setOnClickListener {
-            Toast.makeText(this, "Add", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, CreateEventActivity::class.java))
         }
         binding.navLocation.setOnClickListener {
             Toast.makeText(this, "Location", Toast.LENGTH_SHORT).show()
