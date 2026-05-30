@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".ui.event_activity.ThankYouVolunteerActivity">
+
+    <!-- ✅ Bottom ocean image -->
+    <ImageView
+        android:id="@+id/imgOcean"
+        android:layout_width="404dp"
+        android:layout_height="443dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_ocean_thankyou"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- ✅ Top logo + name -->
+    <LinearLayout
+        android:id="@+id/layoutLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Logo circle -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_waralalogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- WARALA text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WARALA"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+    <!-- ✅ Collect badge card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBadge"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#E8D7F6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutLogo">
+
+        <!-- Gradient-like inner layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/badge_gradient_bg">
+
+            <!-- Fish badge image -->
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_fish_badge"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Text -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineSpacingExtra="2dp"
+                android:text="Collect\nbadge?"
+                android:textColor="#5A145E"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ✅ THANK YOU! text -->
+    <TextView
+        android:id="@+id/tvThankYou"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="THANK YOU!"
+        android:textColor="@color/normal_black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardBadge" />
+
+    <!-- ✅ You helped clean the ocean <3 -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You helped clean\nthe ocean &lt;3"
+        android:textColor="@color/normal_black"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvThankYou" />
+
+    <!-- ✅ SEE HISTORY button -->
+    <Button
+        android:id="@+id/btnSeeHistory"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_teal_rounded"
+        android:text="SEE HISTORY"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <!-- ✅ BACK TO HOME button -->
+    <Button
+        android:id="@+id/btnBackToHome"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/sky_blue"
+        android:text="BACK TO HOME"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSeeHistory" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,7 +32,7 @@ fun SplashScreen01(onSplashFinished: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF1E6F8E)),      // ✅ exact teal background color
+            .background(Color(0xFF1E6F8E)),      //  exact teal background color
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -39,19 +40,19 @@ fun SplashScreen01(onSplashFinished: () -> Unit) {
             verticalArrangement = Arrangement.Center,
             modifier = Modifier
                 .fillMaxWidth()
-                .offset(y = (-30).dp)            // ✅ shift slightly above center
+                .offset(y = (-30).dp)            //  shift slightly above center
         ) {
 
-            // ✅ White circle with mermaid logo inside
+            //  White circle with mermaid logo inside
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
-                    .size(130.dp)                // circle size
+                    .size(100.dp)                // circle size
                     .clip(CircleShape)
                     .background(Color.White)
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_warala_logo),
+                    painter = painterResource(id = R.drawable.ic_waralalogo),
                     contentDescription = "Warala Logo",
                     modifier = Modifier
                         .size(100.dp)            // logo fills most of circle
@@ -65,10 +66,11 @@ fun SplashScreen01(onSplashFinished: () -> Unit) {
             // ✅ WARALA — wide letter spacing, white, lightweight serif look
             Text(
                 text = "WARALA",
-                fontSize = 20.sp,
+                fontSize = 32.sp,
+                fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Normal,
                 color = Color.White,
-                letterSpacing = 10.sp,           // ✅ wide spacing matches design
+                letterSpacing = 10.sp,
                 textAlign = TextAlign.Center
             )
         }

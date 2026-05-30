@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".ui.event_activity.ThankYouActivity">
+
+    <!-- ✅ Bottom ocean image -->
+    <ImageView
+        android:id="@+id/imgOcean"
+        android:layout_width="404dp"
+        android:layout_height="445dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_thank_you"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- ✅ Top logo + name -->
+    <LinearLayout
+        android:id="@+id/layoutLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Logo circle -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_waralalogo" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- WARALA text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WARALA"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+    <!-- ✅ THANK YOU FOR JOINING! text -->
+    <TextView
+        android:id="@+id/tvThankYou"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="THANK YOU\nFOR JOINING!"
+        android:textColor="@color/normal_black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutLogo"
+        android:layout_marginTop="90dp" />
+
+    <!-- ✅ BACK TO HOME button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnBackToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvThankYou">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="BACK TO HOME"
+            android:textColor="@color/normal_black"
+            android:fontFamily="serif"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

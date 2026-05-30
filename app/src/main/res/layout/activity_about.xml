@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.AboutActivity">
+
+    <!-- ✅ Full screen background image as root -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ✅ Background image — fills everything -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_aboutus" />
+
+        <!-- ✅ Dark overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55000000" />
+
+        <!-- ✅ Scroll content on top of image -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- ABOUT US title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ABOUT\nUS"
+                    android:textColor="@color/light_green"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Content section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp">
+
+                    <!-- Description card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        app:cardBackgroundColor="@color/light_green"
+                        app:cardCornerRadius="22dp"
+                        app:cardElevation="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Warala is a community-driven app dedicated to protecting our oceans and marine life. We empower individuals to report pollution, participate in clean-up events, track their plastic footprint, and learn about marine conservation. Together, we can keep our waters clean and life below water thriving."
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp"
+                            android:padding="20dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- ✅ SERVICES section — teal background -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/light_green"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingTop="24dp"
+                        android:paddingBottom="24dp">
+
+                        <!-- SERVICES title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SERVICES"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:fontFamily="serif"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- Service 1 — Pollution Reporting -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardService1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="POLLUTION REPORTING"
+                                    android:textColor="@color/teal_700"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    android:layout_marginBottom="8dp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Instantly report ocean and beach pollution with photos and location."
+                                    android:textColor="@color/normal_black"
+                                    android:textSize="13sp"
+                                    android:lineSpacingExtra="3dp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Service 2 — Clean-Up Event Tracker -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardService2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CLEAN-UP EVENT TRACKER"
+                                    android:textColor="@color/teal_700"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    android:layout_marginBottom="8dp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Find, join, and organize local beach and ocean clean-up events in your area."
+                                    android:textColor="@color/normal_black"
+                                    android:textSize="13sp"
+                                    android:lineSpacingExtra="3dp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Service 3 — Waste Logging -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardService3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="WASTE LOGGING"
+                                    android:textColor="@color/teal_700"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    android:layout_marginBottom="8dp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Record the type and amount of waste collected during clean-ups."
+                                    android:textColor="@color/normal_black"
+                                    android:textSize="13sp"
+                                    android:lineSpacingExtra="3dp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Service 4 — Marine Life Education -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardService4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MARINE LIFE EDUCATION"
+                                    android:textColor="@color/teal_700"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="serif"
+                                    android:layout_marginBottom="8dp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Learn about marine ecosystems, endangered species, and how to protect ocean life."
+                                    android:textColor="@color/normal_black"
+                                    android:textSize="13sp"
+                                    android:lineSpacingExtra="3dp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+
+    <!-- ✅ Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/teal_700"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navCompass"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_compass"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navAdd"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_add"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navLocation"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_area"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
