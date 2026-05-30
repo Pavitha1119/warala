@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 <uses-permission android:name="android.permission.INTERNET"/>
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -99,6 +103,17 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-    </application>
+        <!--  Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAi3DObDfWBKXcNXaBplDrh0i_MNACqeyo" />
+
+            <!-- Map Activity -->
+            <activity
+                android:name=".ui.home.MapActivity"
+                android:exported="false"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        </application>
+
 
 </manifest>
