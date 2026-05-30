@@ -1,4 +1,4 @@
-# 🌊 WARALA
+# WARALA
 
 **WARALA** is a mobile application developed to support **marine conservation, environmental awareness, and community engagement**. The application enables users to learn about marine ecosystems, report pollution incidents, participate in cleanup events, and contribute to protecting Sri Lanka’s coastal environment.
 
@@ -82,7 +82,7 @@ Mobile Application and Development
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 User
@@ -104,7 +104,7 @@ Firebase Services
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 com.example.warala
@@ -143,8 +143,8 @@ com.example.warala
 
 ---
 
-GitHub Repository:  
-👉 https://github.com/Pavitha1119/warala
+**GitHub Repository**:  
+https://github.com/Pavitha1119/warala
 
 ---
 
