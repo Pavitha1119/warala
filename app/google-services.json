@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "37514580369",
+    "project_id": "warala-mobile-app",
+    "storage_bucket": "warala-mobile-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37514580369:android:45ef0acd91b6c6b85fca30",
+        "android_client_info": {
+          "package_name": "com.example.warala"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACYw2R1feO9NdIVb1PDgoabOnHjm6WWg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

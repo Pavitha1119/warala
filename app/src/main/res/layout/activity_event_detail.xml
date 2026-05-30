@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    tools:context=".ui.event_activity.EventDetailActivity">
+
+    <!-- ✅ Scroll content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ✅ Top image with title -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <!-- Event image -->
+                <ImageView
+                    android:id="@+id/imgEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_shoreline" />
+
+                <!-- Dark overlay -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#44000000" />
+
+                <!-- Event title -->
+                <TextView
+                    android:id="@+id/tvEventTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="20dp"
+                    android:text="CLEAN A\nSHORELINE"
+                    android:textColor="@color/dark_green"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:lineSpacingExtra="4dp" />
+
+            </FrameLayout>
+
+            <!-- ✅ Content section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <!-- Popular tag -->
+                <TextView
+                    android:id="@+id/tvPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#2nd popular"
+                    android:textColor="@color/light_pink"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- ✅ Location row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_location"
+                            app:tint="@color/normal_black" />
+
+                        <TextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Hikkaduwa, Sri lanka"
+                            android:textColor="@color/normal_black"
+                            android:textSize="14sp"
+                            android:paddingStart="12dp" />
+                    </LinearLayout>
+
+                    <!-- View map button -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnViewMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="32dp"
+                        app:cardBackgroundColor="@color/light_blue"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="view map"
+                            android:textColor="@color/teal_700"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- ✅ Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_icon"
+                    android:alpha="0.3"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ Date row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="@color/normal_black" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feb 02, 2026"
+                        android:textColor="@color/normal_black"
+                        android:textSize="14sp"
+                        android:paddingStart="12dp" />
+
+                </LinearLayout>
+
+                <!-- ✅ Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_icon"
+                    android:alpha="0.3"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ Time row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_time"
+                            app:tint="@color/normal_black" />
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="8.00 A.M - 1.00 P.M"
+                            android:textColor="@color/normal_black"
+                            android:textSize="14sp"
+                            android:paddingStart="12dp" />
+
+                    </LinearLayout>
+
+                    <!-- Add to calendar button -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnAddCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="32dp"
+                        app:cardBackgroundColor="@color/light_blue"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="add to your calender"
+                            android:textColor="@color/teal_700"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- ✅ Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_icon"
+                    android:alpha="0.3"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ Organizer row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/normal_black" />
+
+                        <TextView
+                            android:id="@+id/tvOrganizer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Commercial Bank"
+                            android:textColor="@color/normal_black"
+                            android:textSize="14sp"
+                            android:paddingStart="12dp" />
+
+                    </LinearLayout>
+
+                    <!-- See more organizer button -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnSeeOrganizer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="32dp"
+                        app:cardBackgroundColor="@color/light_blue"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="see more about the organizer"
+                            android:textColor="@color/teal_700"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- ✅ Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_icon"
+                    android:alpha="0.3"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ Volunteers row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_group"
+                        app:tint="@color/normal_black" />
+
+                    <TextView
+                        android:id="@+id/tvVolunteers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24 volunteers"
+                        android:textColor="@color/normal_black"
+                        android:textSize="14sp"
+                        android:paddingStart="12dp" />
+
+                </LinearLayout>
+
+                <!-- ✅ Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_icon"
+                    android:alpha="0.3"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ Description row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="24dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_description"
+                        app:tint="@color/normal_black" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Volunteering to clean a beach is an excellent opportunity to witness the marine destruction caused. It also helps in building community cohesion, social interaction, and community awareness."
+                        android:textColor="@color/normal_black"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingStart="12dp" />
+
+                </LinearLayout>
+
+                <!-- ✅ VOLUNTEER button -->
+                <Button
+                    android:id="@+id/btnVolunteer"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/btn_teal_rounded"
+                    android:text="VOLUNTEER"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- ✅ LOG COLLECTED WASTE button -->
+                <Button
+                    android:id="@+id/btnLogWaste"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/btn_outline_teal"
+                    android:text="LOG COLLECTED WASTE"
+                    android:textColor="@color/teal_700"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ✅ See other popular events -->
+                <TextView
+                    android:id="@+id/tvSeeOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="see other popular events"
+                    android:textColor="@color/teal_700"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ✅ Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/teal_700"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navCompass"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_compass"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navAdd"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_add"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navLocation"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_area"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
