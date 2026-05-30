@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // ✅ Back button — new way
+        // Back button — new way
         onBackPressedDispatcher.addCallback(
             this,
             object : OnBackPressedCallback(true) {
@@ -38,17 +38,17 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         )
-        // ✅ Menu button — drawer open කරන්න
+        // Menu button — drawer open
         binding.imgMenu.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.END)
         }
 
-        // ✅ Close drawer — back arrow
+        // Close drawer — back arrow
         binding.btnCloseDrawer.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
         }
 
-        // ✅ ABOUT US click
+        // ABOUT US click
         binding.menuAboutUs.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
             Toast.makeText(
@@ -58,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
              startActivity(Intent(this, AboutActivity::class.java))
         }
 
-        // ✅ FAQ click
+        // FAQ click
         binding.menuFaq.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
             Toast.makeText(
@@ -68,7 +68,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, FaqActivity::class.java))
         }
 
-        // ✅ CONTACT US click
+        // CONTACT US click
         binding.menuContactUs.setOnClickListener {
             binding.drawerLayout.closeDrawer(GravityCompat.END)
             Toast.makeText(
@@ -78,7 +78,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, ContactActivity::class.java))
         }
 
-        // ✅ Location spinner
+        // Location spinner
         val locations = listOf(
             "Select location",
             "Colombo",
@@ -98,14 +98,14 @@ class HomeActivity : AppCompatActivity() {
         binding.spinnerLocation.adapter = adapter
 
 
-        // ✅ Report Pollution button
+        // Report Pollution button
         binding.btnReportPollution.setOnClickListener {
             startActivity(
                 Intent(this, ReportPollutionActivity::class.java)
             )
         }
 
-        // ✅ Cleanup cards
+        // Cleanup cards
         binding.cardCleanup1.setOnClickListener {
             startActivity(Intent(this, EventDetailActivity::class.java))
         }
@@ -116,7 +116,7 @@ class HomeActivity : AppCompatActivity() {
             ).show()
         }
 
-        // ✅ Event cards
+        // Event cards
         binding.cardEvent1.setOnClickListener {
             Toast.makeText(
                 this, "Save Corals clicked",
@@ -130,24 +130,25 @@ class HomeActivity : AppCompatActivity() {
             ).show()
         }
 
-        // ✅ Bottom navigation
+        //Bottom navigation
         binding.navHome.setOnClickListener {
             Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
         }
         binding.navCompass.setOnClickListener {
             startActivity(Intent(this, LearnActivity::class.java))
         }
-        // ✅ navAdd button click
+        // navAdd button click
         binding.navAdd.setOnClickListener {
             startActivity(Intent(this, CreateEventActivity::class.java))
         }
+        // Location nav button
         binding.navLocation.setOnClickListener {
-            Toast.makeText(this, "Location", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MapActivity::class.java))
         }
         binding.navProfile.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
-        // ✅ Heart toggle — gray ↔ teal
+        // Heart toggle — gray ↔ teal
         var isLiked1 = false
         binding.imgHeart1.setOnClickListener {
             isLiked1 = !isLiked1
